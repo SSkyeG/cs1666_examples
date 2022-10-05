@@ -27,9 +27,7 @@ fn setup(mut commands: Commands) {
 	commands.spawn_bundle(Camera2dBundle::default());
 }
 
-fn keyboard_input(
-		input: Res<Input<KeyCode>>, mut clear_color: ResMut<ClearColor>
-) {
+fn keyboard_input(input: Res<Input<KeyCode>>, mut clear_color: ResMut<ClearColor>) {
     if input.just_pressed(KeyCode::W) {
 		clear_color.0 = Color::RED;
     }
